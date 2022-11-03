@@ -1,0 +1,99 @@
+.workFilters {
+  display: flex;
+  align-items: center;
+  column-gap: 1.875rem;
+  margin-bottom: 2.5rem;
+}
+
+.workItem {
+  cursor: pointer;
+  font-weight: var(--b);
+  transition: .3s;
+}
+
+.workItem:hover {
+  color: var(--primary-color);
+}
+
+.workContainer {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.875rem;
+}
+
+.workCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.workMask {
+  background: #6c6ce5;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transition: .3s;
+  opacity: 0;
+}
+
+.workCard:hover .workMask {
+  opacity: 0.9;
+}
+
+.workCategory {
+  color: #fff;
+  background: var(--primary-color);
+  border-bottom-left-radius: 0.98rem;
+  border-bottom-right-radius: 0.98rem;
+  position: absolute;
+  top: 0;
+  left: 1.5rem;
+  font-size: var(--sm);
+
+  display: inline-block;
+  padding: 0.19rem 0.625rem;
+  transform: translateY(-40px);
+  transition: .3s;
+}
+
+.workTitle {
+  color: #fff;
+  font-size: var(--h3);
+  margin: 0 0 0.98rem;
+  padding: 0 1.25rem;
+  position: absolute;
+  top: 3.75rem;
+  transform: translateY(30px);
+  transition: .3s;
+  opacity: 0;
+}
+
+.workButton {
+  color: #fff;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  font-size: var(--h3);
+  display: block;
+  background: #ffd15c;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  transition: .3s;
+  opacity: 0;
+}
+
+.workCard:hover .workButton {
+  opacity: 1;
+}
+
+.workCard:hover .workTitle,
+.workCard:hover .workCategory {
+  opacity: 1;
+  transform: translateY(0);
+}

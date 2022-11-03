@@ -1,0 +1,40 @@
+.aside {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: var(--body-color);
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 2.5rem;
+  width: 110px;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.navLink {
+  font-size: var(--h2);
+  color: var(--title-color);
+  font-weight: var(--b);
+  transition: .3s;
+}
+
+.navLink:hover {
+  color: #ffd15c;
+}
+
+.copyright {
+  font-size: var(--sml);
+  color: #9b98b3;
+  font-size: var(-sml);
+  transform: rotate(-180deg);
+  writing-mode: vertical-rl;
+}

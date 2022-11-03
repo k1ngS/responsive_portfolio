@@ -1,0 +1,52 @@
+.resumeContainer {
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.875rem;
+}
+
+.timeline {
+  background: var(--container);
+  padding: 1.875rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.timelineItem {
+  position: relative;
+  padding-left: 3.125rem;
+  padding-bottom: 3.125rem;
+}
+
+.timelineItem:last-child {
+  padding-bottom: 0;
+}
+
+.timelineItem::before {
+  content: '';
+  width: 1px;
+  height: 100%;
+  background: var(--primary-color);
+  position: absolute;
+  left: .25rem;
+  top: 0;
+}
+
+.timeline .icon-briefcase,
+.timeline .icon-graduation {
+  position: absolute;
+  left: -0.4375rem;
+  top: 0;
+  font-size: var(--h2);
+  color: var(--primary-color);
+  background: var(--container-color);
+  padding: 0.4375rem 0;
+}
+
+.timelineDate {
+  color: #8b88b1;
+  font-size: var(--sm);
+}
+
+.timelineTitle {
+  font-size: var(--h3);
+  margin: 0.5rem 0;
+}
