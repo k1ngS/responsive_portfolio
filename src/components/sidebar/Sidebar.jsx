@@ -1,68 +1,76 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./sidebar.css"
 import Logo from '../../assets/logo.svg'
 
 const Sidebar = () => {
+  const [toggle, showMenu] = useState(false);
   return (
-    <aside className='aside'>
-      <a href='#home' className='navLoge'>
-        <img src={Logo} alt="Logo" />
-      </a>
+    <>
+      <aside className={toggle ? 'aside showMenu' : 'aside'}>
+        <a href='#home' className='navLoge'>
+          <img src={Logo} alt="Logo" />
+        </a>
 
-      <nav className="nav">
-        <div className="navMenu">
-          <ul className="navList">
-            <li className="navItem">
-              <a href="#home" className="navLink">
-                <i className="icon-home"></i>
-              </a>
-            </li>
+        <nav className="nav">
+          <div className="navMenu">
+            <ul className="navList">
+              <li className="navItem">
+                <a href="#home" className="navLink">
+                  <i className="icon-home"></i>
+                </a>
+              </li>
 
-            <li className="navItem">
-              <a href="#about" className="navLink">
-                <i className="icon-user-following"></i>
-              </a>
-            </li>
+              <li className="navItem">
+                <a href="#about" className="navLink">
+                  <i className="icon-user-following"></i>
+                </a>
+              </li>
 
-            <li className="navItem">
-              <a href="#services" className="navLink">
-                <i className="icon-briefcase"></i>
-              </a>
-            </li>
+              <li className="navItem">
+                <a href="#services" className="navLink">
+                  <i className="icon-briefcase"></i>
+                </a>
+              </li>
 
-            <li className="navItem">
-              <a href="#resume" className="navLink">
-                <i className="icon-graduation"></i>
-              </a>
-            </li>
+              <li className="navItem">
+                <a href="#resume" className="navLink">
+                  <i className="icon-graduation"></i>
+                </a>
+              </li>
 
-            <li className="navItem">
-              <a href="#portfolio" className="navLink">
-                <i className="icon-layers"></i>
-              </a>
-            </li>
+              <li className="navItem">
+                <a href="#portfolio" className="navLink">
+                  <i className="icon-layers"></i>
+                </a>
+              </li>
 
-            <li className="navItem">
-              <a href="#blog" className="navLink">
-                <i className="icon-note"></i>
-              </a>
-            </li>
+              <li className="navItem">
+                <a href="#blog" className="navLink">
+                  <i className="icon-note"></i>
+                </a>
+              </li>
 
-            <li className="navItem">
-              <a href="#contact" className="navLink">
-                <i className="icon-bubble"></i>
-              </a>
-            </li>
-          </ul>
+              <li className="navItem">
+                <a href="#contact" className="navLink">
+                  <i className="icon-bubble"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div className="navFooter">
+          <span className="copyright">
+            marcos_k1ngs&copy;2022 - 2023
+          </span>
         </div>
-      </nav>
+      </aside>
 
-      <div className="navFooter">
-        <span className="copyright">
-          marcos_k1ngs&copy;2022 - 2023
-        </span>
+      <div className={toggle ? 'navToggle navToggle-open' :
+        'navToggle'} onClick={() => showMenu(!toggle)}>
+        <i className="icon-menu"></i>
       </div>
-    </aside>
+    </>
   )
 }
 

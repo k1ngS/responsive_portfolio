@@ -1,14 +1,7 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
 
-
 :root {
-  --primary-color: #ff3d61;
-  --title-color: #353252;
-  --text-color: #5e5c7f;
-  --body-color: #f9f7fd;
-  --container-color: #fff;
-
   --body-font: 'Rubik', sans-serif;
   --h1: 2.25rem;
   --h2: 1.5rem;
@@ -24,6 +17,22 @@
   --shadow: 0px 5px 20px 0px rgb(69 67 96 / 10%);
 
   --border-radius: 20px;
+}
+
+.light-theme {
+  --primary-color: #ff3d61;
+  --title-color: #353252;
+  --text-color: #5e5c7f;
+  --body-color: #f9f7fd;
+  --container-color: #fff;
+}
+
+.dark-theme {
+  --primary-color: #861d31;
+  --title-color: #f9f7fd;
+  --text-color: #fff;
+  --body-color: #353252;
+  --container-color: #5e5c7f;
 }
 
 @media screen and(max-width: 1024px) {
@@ -135,6 +144,19 @@ img {
   display: inline-block;
   background: var(--primary-color);
   font-weight: var(--b);
+}
+
+.box {
+  position: absolute;
+  right: 1rem;
+  display: flex;
+  width: 200px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: var(--title-color);
+  margin: 1rem auto;
 }
 
 @keyframes button-push {

@@ -47,3 +47,31 @@
 .contactForm-area textarea {
   resize: none;
 }
+
+@media screen and (max-width: 1024px) {
+  .contactContainer {
+    grid-template-columns: repeat(300px, 360px);
+    justify-content: center;
+  }
+
+  .contactForm-group {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contactContainer {
+    grid-template-columns: 310px;
+    row-gap: 1.875rem;
+  }
+
+  .contactInfo {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .contactContainer {
+    grid-template-columns: 1fr;
+  }
+}
